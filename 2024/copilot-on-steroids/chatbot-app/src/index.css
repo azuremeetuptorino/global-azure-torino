@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap");
+body {
+  font-family: "Archivo" !important;
+}
+.chat-panel {
+  bottom: 10px;
+  position: absolute;
+}
+.MuiTypography-root {
+  font-family: "Archivo" !important;
+}
+
+.MuiDrawer-paper {
+  width: 1600px;
+  background-color: #f7f7f7;
+}
+
+.MuiFormLabel-root {
+  color: #222221;
+  font-size: 12px;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #222221 !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 0 !important;
+}
+.MuiOutlinedInput-root fieldset {
+  border: 1px solid #eed484;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border: 1px solid #eed484 !important;
+}
+
+.MuiInputBase-root input {
+  height: 14px;
+  font-size: 20px;
+  padding: 16px !important;
+  border: none !important;
+  width: 100%;
+  font-weight:bold ;
+}
+
+.MuiListItemText-root {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.MuiInputLabel-root {
+  font-size: 14px !important;
+  line-height: 7px !important;
+}
+
+.MuiInputBase-root input[type="text"]:focus,
+.MuiInputBase-root input[type="text"]:active {
+  border: none !important;
+}
+
+.MuiButton-contained {
+  background-color: #eed484 !important;
+  color: #222221 !important;
+}
+
+.header-message {
+  text-align: center;
+}
+
+.conversation-author {
+  color: #222221;
+  font-size: 12px;
+  font-weight: bold;
+  padding-right: 16px;
+}
+.conversation-message {
+  color: #666666;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 6px;
+}
+.conversation-message .feedback {
+  margin-top: 4px;
+  text-align: right;
+  display: inline-block;
+  float: right;
+}
+
+.conversation-message.left {
+  background-color: #eed484;
+  text-align: left;
+}
+
+.MuiTypography-h5 {
+  font-size: 24px !important;
+}
+
+.MuiSvgIcon-fontSizeMedium {
+  font-size: 24px !important;
+}
+
+.conversation-message.right {
+  background-color: #cccccc;
+  text-align: right;
+}
+
+.conversation-time {
+  color: #cccccc;
+  font-size: 12px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.padding-16 {
+  padding: 16px;
+}
+
+.yellow {
+  background-color: #eed484;
+}
+
+.header-divider {
+  margin-top: 16px !important;
+  background-color: #eed484 !important;
+  height: 4px !important;
+  border-radius: 4px !important;
+}
+
+.message-box {
+  width: 65%;
+}
+.iconHeaderBig {
+  font-size: 66px;
+}
+.msc-avatar {
+  background-color: white !important;
+  border: 1px solid #222221;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.msc-avatar > svg {
+  height: 28px;
+  width: 28px;
+}
+
+.msc-avatar path {
+  fill: #222221;
+}
+
+.extraSmallIcon {
+  font-size: 13px !important;
+  cursor: pointer;
+}
+
+.reset {
+  color: #222221 !important;
+  background-color: #cccccc !important;
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.send {
+  color: #222221 !important;
+  background-color: #eed484 !important;
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.audioInput {
+  display: none;
+}
+
+div.play {
+  display: inline-block;
+  float: left;
+}
+/**
+ * ==============================================
+ * Dot Typing
+ * ==============================================
+ */
+.stage {
+  padding-left: 16px;
+  padding-top: 12px;
+}
+
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #666666;
+  color: #666666;
+  box-shadow: 9984px 0 0 0 #666666, 9999px 0 0 0 #666666, 10014px 0 0 0 #666666;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 #666666, 9999px 0 0 0 #666666,
+      10014px 0 0 0 #666666;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #666666, 9999px 0 0 0 #666666,
+      10014px 0 0 0 #666666;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #666666, 9999px 0 0 0 #666666,
+      10014px 0 0 0 #666666;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #666666, 9999px -10px 0 0 #666666,
+      10014px 0 0 0 #666666;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #666666, 9999px 0 0 0 #666666,
+      10014px 0 0 0 #666666;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #666666, 9999px 0 0 0 #666666,
+      10014px -10px 0 0 #666666;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #666666, 9999px 0 0 0 #666666,
+      10014px 0 0 0 #666666;
+  }
+}

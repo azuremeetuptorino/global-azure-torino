@@ -1,0 +1,30 @@
+chatbot-app\src\lib\synth.ts
+chatbot-app\src\lib\speech.ts
+const key = // put speechKey value in secrets file
+
+
+weather 
+app.seetings.development.json
+systemMessageName="weather"
+functionsCalls names active
+	GetCurrentWeather 
+	GetPastForecast
+
+chatbot-app\src\App.tsx
+linea 12/13 
+	text: "Hello I am Emma, your weather virtual assistant. askme about the current weather in differnt cities and i will try to provide you an answer.",   	
+-------------------
+app.seetings.development.json
+systemMessageName="mymsc"
+functionsCalls names active
+	GetQuotesByUser 
+	QuotationQueryRequest
+	SubmitQuoteRequest
+
+chatbot-app\src\App.tsx
+linea 12/13 
+  
+linea 12/13   
+	text: "Hello I am Emma, your myMSC virtual assistant. I can help you list and filter your existing quotes, and ask for new ones.",     
+
+	

@@ -1,0 +1,70 @@
+A: Hello I am Emma, myMSC virtual assistant. How can I help you with?
+-----------
+U: i need a quote
+-----------
+A: Sure, I can help you with that. Could you please provide me with the following details?
+
+1. Your email address
+2. Origin and destination
+3. Container type (20DV or 40DV)
+4. Commodity group
+5. Cargo weight and its unit (Kilograms or Pounds)
+-----------  
+U: email : enrico.sabbadin@msc.com , contaner type : 20dv , commodity : FAK , weight 2000KG
+-----------
+A: Thank you for the information. Could you please also provide the origin and destination for the quote?
+-----------  
+U: origin : new york , destination : antwerp
+-----------
+A: I found multiple matches for the origin "New York". Could you please specify if it's "NEW YORK NORTH [USNYCN]" or "NEW YORK SOUTH [USNYCS]"?
+----------- 
+U: USNYCN
+-----------
+A: Here are some quotes based on the details you provided:
+
+1. Amount: 1041 USD, Transit Days: 19, Shipping Window: 2023-12-05 to 2024-01-04
+2. Amount: 1411 USD, Transit Days: 19, Shipping Window: 2023-12-05 to 2024-01-04
+3. Amount: 775 USD, Transit Days: 19, Shipping Window: 2023-12-05 to 2024-01-04
+4. Amount: 894 USD, Transit Days: 18, Shipping Window: 2023-12-05 to 2024-01-04
+
+Please let me know which one you would like to submit.
+-----------  
+U: the 3rd one
+-----------
+A: Your quote has been successfully submitted. Here are the details:
+
+- Quote Number: QXVX9B
+- Email: enrico.sabbadin@msc.com
+- Expiration Date: 2023-12-27
+- Status: Submitted
+- Creation Date: 2023-11-30
+- Amount: 775 USD
+- Transit Days: 19
+- Shipping Window: 2023-12-05 to 2024-01-04
+- Container Type: 20DV
+- Origin: NEW YORK NORTH [USNYCN]
+- Destination: ANTWERP [BEANR]
+- Weight: 2000 Kilograms
+- Commodity Group: FAK
+
+Please let me know if you need any further assistance.
+-----------  
+U: list my quotes
+-----------
+A: Here are your quotes:
+
+1. Quote Number: MBY84, Status: Submitted, Amount: 1069 USD, Origin: BELEM, Destination: ASHDOD, Container Type: 40DV, Weight: 1189 Pounds, Commodity Group: "Frozen cobia \"Rachycentron canadum\""
+
+2. Quote Number: 93VEO, Status: Submitted, Amount: 694 USD, Origin: PUERTO SEGURO FLUVIAL (VILLETA), Destination: AGIGEA, Container Type: 20DV, Weight: 978 Pounds, Commodity Group: Frozen meat of freshwater fish n.e.s. (excl. fillets and surimi)
+
+3. Quote Number: 5RIL2, Status: Submitted, Amount: 873 USD, Origin: ITAJAI, Destination: PORT CHALMERS, Container Type: 40DV, Weight: 213 Pounds, Commodity Group: Apple juice, unfermented, Brix value > 20 but <= 67 at 20�C, value of <= 18 ? per 100 kg, d containing > 30% added sugar (excl. containing spirit)
+
+4. Quote Number: 4M2YS, Status: Submitted, Amount: 1168 USD, Origin: VENICE, Destination: MARSDEN POINT, Container Type: 20DV, Weight: 791 Kilograms, Commodity Group: Women's or girls' blouses, shirts and shirt-blouses of flax or ramie, knitted or crocheted (excl. T-shirts and vests)
+
+5. Quote Number: PRTW1, Status: Expired, Amount: 1173 USD, Origin: AHUS, Destination: PUERTO CORTES, Container Type: 20DV, Weight: 1147 Kilograms, Commodity Group: "2-"N,N-Diethylamino"ethylchloride hydrochloride"
+
+6. Quote Number: QW69VU, Status: Submitted, Amount: 775 USD, Origin: NEW YORK NORTH [USNYCN], Destination: ANTWERP [BEANR], Container Type: 20DV, Weight: 2000 Kilograms, Commodity Group: FAK
+
+7. Quote Number: QXVX9B, Status: Submitted, Amount: 775 USD, Origin: NEW YORK NORTH [USNYCN], Destination: ANTWERP [BEANR], Container Type: 20DV, Weight: 2000 Kilograms, Commodity Group: FAK
+
+Please let me know if you need any further assistance.
