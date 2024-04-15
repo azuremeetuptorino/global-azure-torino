@@ -46,37 +46,33 @@ public class CompletionEndpointBrick : LangChainBrickBase, ILangChainBrick, ISin
         {
             chatCompletionsOptions.Tools.Add(t);
         }
-    
+
 
         chatCompletionsOptions.DeploymentName = question.ModelName;
         var response = await _openAiClient.GetChatCompletionsAsync(chatCompletionsOptions);
-            var choice = response.Value.Choices[0];
+        var choice = response.Value.Choices[0];
 
-
-            if (choice.FinishReason == CompletionsFinishReason.ToolCalls && choice.Message.ToolCalls.Count>0)
+        if (choice.FinishReason == CompletionsFinishReason.ToolCalls && choice.Message.ToolCalls.Count > 0)
+        {
+            // should i add ChatRequestAssistantMessage and ChatRequestToolMessage to saved history ? 
+            var toolCallHistoryMessage = new ChatRequestAssistantMessage(choice.Message);
+            chatCompletionsOptions.Messages.Add(toolCallHistoryMessage);
+            var functionCalls = choice.Message.ToolCalls.OfType<ChatCompletionsFunctionToolCall>();
+            foreach (var functionCall in functionCalls)
             {
-                // should i add ChatRequestAssistantMessage and ChatRequestToolMessage to saved history ? 
-                var toolCallHistoryMessage = new ChatRequestAssistantMessage(choice.Message);
-                chatCompletionsOptions.Messages.Add(toolCallHistoryMessage);
-                var functionCalls = choice.Message.ToolCalls.OfType<ChatCompletionsFunctionToolCall>();
-                foreach (var functionCall in functionCalls)
-                {
-                    var ret = await _functionCaller.CallFunction(functionCall);
-                    chatCompletionsOptions.Messages.Add(new ChatRequestToolMessage(ret.Result, functionCall.Id));
-                }
-                chatCompletionsOptions.ToolChoice = ChatCompletionsToolChoice.None;
-                // i should check for token limit 
-                response = await _openAiClient.GetChatCompletionsAsync(
-                    chatCompletionsOptions);
-                return new Answer { AnswerFromChatGpt= response.Value.Choices.ToList()[0].Message.Content ?? "" };
+                var ret = await _functionCaller.CallFunction(functionCall);
+                chatCompletionsOptions.Messages.Add(new ChatRequestToolMessage(ret.Result, functionCall.Id));
             }
-            else
-            {
-                return new Answer { AnswerFromChatGpt = choice.Message.Content ?? "" };
-            }
-
-        
-        
+            chatCompletionsOptions.ToolChoice = ChatCompletionsToolChoice.None;
+            // i should check for token limit 
+            response = await _openAiClient.GetChatCompletionsAsync(
+                chatCompletionsOptions);
+            return new Answer { AnswerFromChatGpt = response.Value.Choices.ToList()[0].Message.Content ?? "" };
+        }
+        else
+        {
+            return new Answer { AnswerFromChatGpt = choice.Message.Content ?? "" };
+        }
     }
 
     private static void AddChatHistory(ChatCompletionsOptions chatCompletionsOptions, List<ConversationHistoryMessage> conversationHistoryMessages)

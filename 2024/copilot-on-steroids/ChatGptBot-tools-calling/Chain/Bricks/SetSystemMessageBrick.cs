@@ -23,6 +23,7 @@ public class SetSystemMessageBrick : LangChainBrickBase, ILangChainBrick, ISingl
         var systemMessage = File.ReadAllText($"Settings{Path.DirectorySeparatorChar}systemMessage-{_chatGptSettings.SystemMessageName}.txt");
         if (!string.IsNullOrEmpty(systemMessage))
         {
+            systemMessage = systemMessage.Replace("{today}", DateTime.Now.ToString("yyyy-MM-dd"));
             question.SystemMessages.Add(new TextWIthTokenCount
                 { Text = systemMessage, Tokens = _gptEncoding.Encode(systemMessage).Count });
         }
