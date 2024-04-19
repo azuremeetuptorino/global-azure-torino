@@ -1,6 +1,7 @@
 using ChatGptBot.Dtos.Completion.Controllers;
 using ChatGptBot.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Azure;
 
 namespace ChatGptBot.Controllers
 {
@@ -11,9 +12,10 @@ namespace ChatGptBot.Controllers
         private readonly ICompletionService _completionService;
 
 
-        public CompletionController(ICompletionService completionService)
+        public CompletionController(ICompletionService completionService, AzureEventSourceLogForwarder logForwarder)
         {
             _completionService = completionService;
+            logForwarder.Start();
         }
 
         [HttpPost("ask", Name = "Ask")]
