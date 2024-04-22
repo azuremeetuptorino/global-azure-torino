@@ -1,0 +1,71 @@
+name: 0.01.0$(rev:.r)
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: refs/heads/master
+#trigger: none
+trigger:
+ branches:
+   include:
+     - demo-june-2023
+ paths:
+   include:
+     - ChatGptBot/ChatGptBot
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  workspace:
+    clean: outputs 
+  pool:
+    name: MYMSC-DEV-BUILD
+  variables:
+   buildPlatform: 'Any CPU'
+   buildConfiguration: 'Release'    
+   solution: 'ChatGptBot\ChatGptBot.sln'
+   project: 'ChatGptBot\ChatGptBot\ChatGptBot.csproj'
+   testFolder: 'ChatGptBot\tests\theTests'
+
+
+  steps:
+  - checkout: self
+    clean: true
+
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core sdk'
+    inputs:
+     packageType: sdk
+     version: '7.x'
+     installationPath: $(Agent.ToolsDirectory)/dotnet
+  - task: NuGetToolInstaller@1
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      projects:  '$(solution)'
+      command: 'restore'
+      selectOrConfig: select
+
+  
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build Project'
+    inputs:
+      command: build
+      projects: $(project)
+      arguments: '--configuration $(buildConfiguration)'
+
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Publish and zip'
+    inputs:
+      command: publish
+      publishWebProjects: False
+      projects: $(project)
+      arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+      zipAfterPublish: True
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      TargetPath: '\\my\share\$(Build.DefinitionName)\$(Build.BuildNumber)'
