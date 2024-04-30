@@ -2,13 +2,19 @@
 ## Link Utili
 ### Microsoft HVE
 [Articolo di presentazione](https://techcommunity.microsoft.com/t5/exchange-team-blog/public-preview-high-volume-email-for-microsoft-365/ba-p/4102271)
+
 [Pagina della documentazione](https://learn.microsoft.com/en-us/Exchange/mail-flow-best-practices/high-volume-mails-m365)
+
 ### Azure (Email) Communication Services
 [Guida generica SDK](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email?tabs=windows%2Caad&pivots=programming-language-python)
+
 [Guida generica SMTP](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email-smtp/smtp-authentication)
+
 [Autenticazione come service principal tramite le variabili d'ambiente](https://learn.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme?view=azure-dotnet#environment-variables)
+
 ### SendGrid
 [Repository GH dell'SDK](https://github.com/sendgrid)
+
 ### Exchange & MS Graph
 [Application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access)
 
