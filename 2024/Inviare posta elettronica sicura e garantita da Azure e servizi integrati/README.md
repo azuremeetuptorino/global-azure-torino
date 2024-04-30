@@ -1,22 +1,22 @@
 # Inviare posta elettronica sicura e garantita da Azure e servizi integrati
 ## Link Utili
 ### Microsoft HVE
-[Articolo di presentazione](https://techcommunity.microsoft.com/t5/exchange-team-blog/public-preview-high-volume-email-for-microsoft-365/ba-p/4102271)
+[Articolo di presentazione](https://techcommunity.microsoft.com/t5/exchange-team-blog/public-preview-high-volume-email-for-microsoft-365/ba-p/4102271?wt.mc_id=M365-MVP-5005337)
 
-[Pagina della documentazione](https://learn.microsoft.com/en-us/Exchange/mail-flow-best-practices/high-volume-mails-m365)
+[Pagina della documentazione](https://learn.microsoft.com/en-us/Exchange/mail-flow-best-practices/high-volume-mails-m365?wt.mc_id=M365-MVP-5005337)
 
 ### Azure (Email) Communication Services
-[Guida generica SDK](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email?tabs=windows%2Caad&pivots=programming-language-python)
+[Guida generica SDK](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email?tabs=windows%2Caad&pivots=programming-language-python?wt.mc_id=M365-MVP-5005337)
 
-[Guida generica SMTP](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email-smtp/smtp-authentication)
+[Guida generica SMTP](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email-smtp/smtp-authentication?wt.mc_id=M365-MVP-5005337)
 
-[Autenticazione come service principal tramite le variabili d'ambiente](https://learn.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme?view=azure-dotnet#environment-variables)
+[Autenticazione come service principal tramite le variabili d'ambiente](https://learn.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme?view=azure-dotnet#environment-variables?wt.mc_id=M365-MVP-5005337)
 
 ### SendGrid
-[Repository GH dell'SDK](https://github.com/sendgrid)
+[Repository GH dell'SDK](https://github.com/sendgrid?wt.mc_id=M365-MVP-5005337)
 
 ### Exchange & MS Graph
-[Application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access)
+[Application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access?wt.mc_id=M365-MVP-5005337)
 
 ## Informazioni utili
 ### Slide 17
